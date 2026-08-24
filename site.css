@@ -53,12 +53,16 @@ main[lang="zh-CN"] .hero h1 { line-height: 1.04; }
 .nav { height: 74px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
 .wordmark {
   width: fit-content;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 650;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
 }
-.wordmark span { color: var(--blue); }
+.wordmark-zh { color: var(--blue-deep); font-size: 0.88em; letter-spacing: 0.04em; }
 .nav-links { display: flex; gap: 34px; }
 .nav-links > a, .nav-profile summary, .nav-resume {
   position: relative;
@@ -533,6 +537,7 @@ main[lang="zh-CN"] .hero h1 { line-height: 1.04; }
   .site-header { position: relative; }
   .nav { height: 66px; }
   .nav { gap: 17px; }
+  .wordmark { gap: 6px; font-size: 12px; }
   .nav-profile summary, .nav-resume { font-size: 10px; }
   .nav-utilities { gap: 14px; }
   .language-switcher { gap: 5px; font-size: 10px; }
