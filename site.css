@@ -450,6 +450,11 @@ a.hero-contact:hover strong { color: var(--ink); }
 .ledger-row span:first-child { font-size: 18px; font-weight: 540; }
 .ledger-row span:nth-child(2) { color: #8fa0a6; font-family: var(--font-geist-mono), monospace; font-size: 10px; letter-spacing: 0.065em; text-transform: uppercase; }
 .ledger-row strong { color: #a9ccd8; font-family: var(--font-geist-mono), monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.035em; text-align: right; text-transform: uppercase; }
+.application-ledger { margin-top: 34px; padding-top: 34px; border-top: 1px solid rgba(255, 255, 255, 0.18); }
+.application-ledger-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(255, 255, 255, 0.2); }
+.application-ledger-grid .ledger-row { grid-template-columns: 1fr; align-content: center; gap: 8px; padding: 16px 26px 16px 0; }
+.application-ledger-grid .ledger-row:not(:last-child) { margin-right: 26px; border-right: 1px solid rgba(255, 255, 255, 0.16); }
+.application-ledger-grid .ledger-row strong { text-align: left; }
 
 .experience-section { color: #f3f3ee; background: var(--night); }
 .experience-inner { padding-bottom: 120px; }
@@ -615,6 +620,8 @@ a.hero-contact:hover strong { color: var(--ink); }
   .upstream-columns { grid-template-columns: 1fr; }
   .upstream-columns > section:first-child { padding: 0 0 34px; }
   .upstream-columns > section:last-child { padding: 34px 0 0; border-top: 1px solid rgba(255, 255, 255, 0.18); border-left: 0; }
+  .application-ledger-grid { grid-template-columns: 1fr; }
+  .application-ledger-grid .ledger-row { margin-right: 0 !important; padding-right: 0; border-right: 0 !important; }
   .experience-feature { grid-template-columns: 1fr; }
   .experience-meta { min-height: 160px; }
   .experience-list { grid-template-columns: 1fr; }
@@ -667,6 +674,7 @@ a.hero-contact:hover strong { color: var(--ink); }
   .upstream-total strong { font-size: 56px; }
   .ledger-row { grid-template-columns: 1fr auto; }
   .ledger-row span:nth-child(2) { display: none; }
+  .application-ledger-grid .ledger-row span:nth-child(2) { display: block; }
   .ledger-row strong { max-width: 130px; }
   .experience-inner { padding-bottom: 70px; }
   .experience-feature { padding-block: 42px; gap: 36px; }
