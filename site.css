@@ -414,32 +414,37 @@ a.hero-contact:hover strong { color: var(--ink); }
 }
 .track-list { border-top: 1px solid rgba(255, 255, 255, 0.2); }
 .track-row {
-  min-height: 80px;
+  min-height: 122px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas: "project role" "focus focus";
-  gap: 7px 14px;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "project" "role" "focus";
+  gap: 8px;
+  padding-block: 18px;
   align-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
-.track-row > a { grid-area: project; min-width: 0; font-size: 17px; font-weight: 560; letter-spacing: -0.02em; }
+.track-row > a { grid-area: project; min-width: 0; overflow-wrap: anywhere; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.25; }
 .track-row > a span { color: #8fbac8; font-size: 0.72em; }
 .track-row > span {
   grid-area: role;
+  min-width: 0;
   color: #c0c9cc;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 570;
-  text-align: right;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-align: left;
 }
 .track-row > strong {
   grid-area: focus;
   color: #8fbac8;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 13.5px;
-  font-weight: 550;
-  letter-spacing: 0.025em;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.45;
 }
+.opensource-source { display: flex; flex-wrap: wrap; gap: 5px; margin: 28px 0 0; color: #aebcc0; font-size: 14px; line-height: 1.6; }
+.opensource-source a { color: #d5e8ee; text-decoration: underline; text-underline-offset: 4px; }
 .owned-project {
   min-height: 300px;
   display: grid;
@@ -519,6 +524,7 @@ a.hero-contact:hover strong { color: var(--ink); }
 .venture-heading { margin-bottom: 58px; }
 .venture-grid { display: grid; grid-template-columns: 1.12fr 0.88fr; gap: 18px; }
 .venture-card {
+  min-width: 0;
   min-height: 390px;
   display: flex;
   flex-direction: column;
@@ -665,7 +671,8 @@ a.hero-contact:hover strong { color: var(--ink); }
   .nav-profile summary, .nav-resume { font-size: 11px; }
   .nav-utilities { gap: 14px; }
   .language-switcher { gap: 5px; font-size: 11px; }
-  .nav-dropdown { right: -76px; width: min(270px, calc(100vw - 32px)); }
+  .nav-profile { position: static; }
+  .nav-dropdown { top: 58px; right: 16px; width: min(300px, calc(100vw - 32px)); }
   .hero { min-height: auto; padding-block: 52px 68px; }
   .hero h1 { margin-block: 24px 22px; font-size: clamp(42px, 12vw, 56px); line-height: 1; }
   main[lang="zh-CN"] .hero h1 { font-size: clamp(35px, 11vw, 48px); }
@@ -697,7 +704,7 @@ a.hero-contact:hover strong { color: var(--ink); }
   .track-heading h4 { font-size: 23px; }
   .track-heading > strong { font-size: 43px; }
   .track-context { min-height: 0; font-size: 14px; }
-  .track-row { min-height: 84px; grid-template-columns: 1fr; grid-template-areas: "project" "role" "focus"; gap: 6px; }
+  .track-row { min-height: 116px; gap: 8px; }
   .track-row > span { text-align: left; }
   .owned-project { grid-template-columns: 1fr; gap: 30px; padding: 28px 24px; }
   .owned-project-index { min-height: 56px; flex-direction: row; align-items: center; }
@@ -715,7 +722,7 @@ a.hero-contact:hover strong { color: var(--ink); }
   .research-list article { min-height: 0; display: grid; grid-template-columns: 54px 1fr; gap: 22px 10px; padding-block: 30px; }
   .research-copy, .research-meta { grid-column: 2; }
   .venture-card { min-height: 350px; padding: 22px; }
-  .venture-card h3 { font-size: 44px; }
+  .venture-card h3 { font-size: clamp(34px, 11vw, 44px); overflow-wrap: anywhere; }
   .credentials-section { padding-block: 80px; }
   .honors-column { padding: 28px 24px 24px; }
   .honors-column ul { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 10px; }
