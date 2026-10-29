@@ -466,7 +466,8 @@ a.hero-contact:hover strong { color: var(--ink); }
 }
 .owned-project-index strong { color: #b1babd; font-size: 48px; font-weight: 520; letter-spacing: -0.06em; }
 .owned-project-copy > p:first-child { margin: 0 0 16px; }
-.owned-project-copy h3 { margin: 0; font-size: clamp(48px, 5.2vw, 70px); font-weight: 520; letter-spacing: -0.07em; line-height: 0.95; }
+.owned-project-copy { min-width: 0; }
+.owned-project-copy h3 { margin: 0; font-size: clamp(42px, 4.6vw, 62px); font-weight: 520; letter-spacing: -0.065em; line-height: 1.02; overflow-wrap: anywhere; }
 .owned-project-copy h3 span { color: var(--blue); font-size: 0.45em; vertical-align: top; }
 .owned-project-copy > p:last-child { max-width: 590px; margin: 24px 0 0; color: var(--ink-soft); font-size: 16px; line-height: 1.6; }
 .owned-project-meta { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; padding-left: 34px; border-left: 1px solid var(--line); }
@@ -497,6 +498,10 @@ a.hero-contact:hover strong { color: var(--ink); }
 .experience-content ul { max-width: 720px; margin: 0; padding: 0; list-style: none; }
 .experience-content li { position: relative; padding: 17px 0 17px 28px; color: #bdc6c9; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 15px; line-height: 1.62; }
 .experience-content li::before { position: absolute; left: 1px; content: "↳"; color: #79aabd; }
+.experience-team + .experience-team { margin-top: 28px; }
+.experience-team h4 { margin: 0; color: #e2eff2; font-size: 21px; font-weight: 650; letter-spacing: -0.02em; line-height: 1.3; }
+.experience-team > p { margin: 7px 0 15px; color: #95b7c3; font-size: 14px; line-height: 1.5; }
+.experience-team ul { padding-left: 12px; }
 .experience-list { display: grid; grid-template-columns: repeat(3, 1fr); }
 .experience-list article { min-height: 330px; padding: 32px 30px 34px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
 .experience-list article:not(:last-child) { margin-right: 30px; border-right: 1px solid rgba(255, 255, 255, 0.18); }
@@ -709,7 +714,7 @@ a.hero-contact:hover strong { color: var(--ink); }
   .owned-project { grid-template-columns: 1fr; gap: 30px; padding: 28px 24px; }
   .owned-project-index { min-height: 56px; flex-direction: row; align-items: center; }
   .owned-project-index strong { font-size: 36px; }
-  .owned-project-copy h3 { font-size: 48px; }
+  .owned-project-copy h3 { font-size: clamp(36px, 10vw, 48px); }
   .owned-project-meta { grid-column: auto; }
   .experience-inner { padding-bottom: 70px; }
   .experience-feature { padding-block: 42px; gap: 36px; }
